@@ -16,6 +16,19 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 #main {margin-left: 120px}
 /* Remove margins from "page content" on small screens */
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 </style>
 </head>
 <body class="w3-black">
@@ -57,11 +70,50 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <!-- Header/Home -->
   <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
     <h1 class="w3-jumbo">Dutta Family</h1>
-    <img src="family.jpg" alt="boy" class="w3-image" width="992" height="1108">
   </header>
-  <p>My family is a close-knit group of individuals who support and care for each other. We share a strong bond and enjoy spending time together. Each member of my family has unique qualities and interests that contribute to the dynamic and loving environment we cherish.</p> 
-  <p>We value traditions, celebrate special occasions with enthusiasm, and always prioritize each other's well-being. Our home is filled with laughter, warmth, and a sense of belonging, making it a sanctuary where we can all grow and thrive together.</p>
+  <p id='anurag'> </p>
+  <p id='ashish'> </p>
+  <p id='shashank'> </p>
+  <p id='mayank'> </p>
+  <p id='khushi'> </p>
+  <p id='kriti'> </p>
+  <p id='aradhya'> </p>
+  <p id='miraya'> </p>
 </div>
+<script>
+const currentDate=new Date();
+const currentMonth=currentDate.toLocaleString('default',{ month: 'long' });
+if(currentMonth==="December")
+{
+ document.getElementById('anurag').innerText="Anurag Birthday is on 18th December";
+ document.getElementById('ashish').innerText="Ashish Birthday is on 30th December";
+}
+else if (currentMonth==="July")
+{
+	document.getElementById('shashank').innerText="Shashank Birthday is on 13th July";
+}
+else if (currentMonth==="September")
+{
+	document.getElementById('mayank').innerText="Mayank Birthday is on 21st September";
+}
+else if (currentMonth==="January")
+{
+	document.getElementById('khushi').innerText="Khushi Birthday is on 1st January";
+	document.getElementById('kriti').innerText="Kriti Birthday is on 15th January";
+}
+else if (currentMonth==="August")
+{
+	document.getElementById('aradhya').innerText="Aradhya Birthday is on 31st August";
+}
+else if (currentMonth==="April")
+{
+	document.getElementById('miraya').innerText="Miraya Birthday is on 23rd April";
+}
+else
+{
+	document.getElementById('anurag').innerText="There is no Up-Coming Events in this Month.";
+}
 
+</script>
 </body>
 </html>
