@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dutta Family</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</head>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="family.jpg" style="width:100%">
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="photos.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>PHOTOS</p>
+  </a>
+  <a href="parents.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-users w3-xxlarge"></i>
+    <p>PARENTS</p>
+  </a>
+  <a href="cousins.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>COUSINS</p>
+  </a>
+  <a href="events.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="bi bi-calendar-event"</i>
+    <p>UP COMING EVENTS</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="index.html" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="photos.html" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+	<a href="parents.html" class="w3-bar-item w3-button" style="width:25% !important">PARENTS</a>
+	<a href="cousins.html" class="w3-bar-item w3-button" style="width:25% !important">COUSINS</a>
+	<a href="events.html" class="w3-bar-item w3-button" style="width:25% !important">UP COMING EVENTS</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo">Dutta Family</h1>
+	<div class="row">
+	
+	<div class="column">
+	<div class="card">
+  <img src="aia.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Amrendra and Indira</b></h4>
+    <p>Anniversary on :- 22nd May</p>
+	<p>Amrendra Birthday :- 06 June</p>
+	<p>Indira Birthday :- 14 July</p>
+  </div>
+</div>
+  </div>
+  
+  <div class="column">
+	<div class="card">
+  <img src="rsa.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Ravindra and Sunita</b></h4>
+    <p>Anniversary on :- 7th June</p>
+	<p>Ravindra Birthday :- 18th Jan</p>
+	<p>Sunita Birthday :- 6th May</p>
+  </div>
+</div>
+  </div>
+  
+  <div class="column">
+	<div class="card">
+  <img src="aka.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Arvind and Kamini</b></h4>
+    <p>Anniversary on :- 12th March</p>
+	<p>Arvind Birthday :- 23rd August</p>
+	<p>Kamini Birthday :- 1st January</p>
+  </div>
+</div>
+  </div>
+
+</div>
+
+<div class="row">
+
+<div class="column">
+	<div class="card">
+  <img src="saa.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Shailendra and Anju</b></h4>
+    <p>Anniversary on :- 12th March</p>
+	<p>Shailendra Birthday :- 10th February</p>
+	<p>Anju Birthday :- 11th December</p>
+  </div>
+</div>
+  </div>
+
+<div class="column">
+	<div class="card">
+  <img src="ksa.jpg" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Kunal and Swati</b></h4>
+    <p>Anniversary on :- 25th May</p>
+	<p>Kunal Birthday :- 20th December</p>
+	<p>Swati Birthday :- 29th May</p>
+  </div>
+</div>
+  </div>
+
+</div>
+
+</div>
+</body>
+</html>
+Am

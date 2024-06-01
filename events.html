@@ -76,41 +76,49 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
     <h1 class="w3-jumbo">Dutta Family</h1>
   </header>
-  <p id='anurag'> </p>
-  <p id='ashish'> </p>
-  <p id='shashank'> </p>
-  <p id='mayank'> </p>
-  <p id='khushi'> </p>
-  <p id='kriti'> </p>
-  <p id='aradhya'> </p>
-  <p id='miraya'> </p>
-  <p id='aia'> </p>
-  <p id='rsa'> </p>
-  <p id='aaa'> </p>
-  <p id='raa'> </p>
-  <p id='ksa'> </p>
-  <p id='amitendra'> </p>
-  <p id='indira'> </p>
-  <p id='ravindra'> </p>
-  <p id='sunita'> </p>
-  <p id='arvind'> </p>
-  <p id='aarti'> </p>
-  <p id='rinku'> </p>
-  <p id='anju'> </p>
-  <p id='kunal'> </p>
-  <p id='swati'> </p>
+	<p id='anju' style='text-decoration: underline; font-size: 40px; color:yellow;'></p>
+	<p id='anurag' style='text-decoration: underline; font-size: 40px; color:yellow;'></p>
+	<p id='kunal' style='text-decoration: underline; font-size: 40px; color:yellow;'></p>
+	<p id='ashish' style='text-decoration: underline; font-size: 40px; color:yellow;'></p>
+	<p id='shashank' style='text-decoration: underline; font-size: 40px; color:yellow;'></p>
+	<p id='indira' style='text-decoration: underline; font-size: 40px; color:yellow;'></p>
+	<p id='amrendra' style='text-decoration: underline; font-size: 40px; color:yellow;'></p>
+	<p id='rsa' style='text-decoration: underline; font-size: 40px; color:yellow;'></p>
+	<p id='mayank' style='text-decoration: underline; font-size: 40px; color:yellow;'></p>
+	<p id='khushi' style='text-decoration: underline; font-size: 40px; color:yellow;'></p>
+	<p id='kamini' style='text-decoration: underline; font-size: 40px; color:yellow;'></p>
+	<p id='kriti' style='text-decoration: underline; font-size: 40px; color:yellow;'></p>
+	<p id='ravindra' style='text-decoration: underline; font-size: 40px; color:yellow;'></p>
+	<p id='arvind' style='text-decoration: underline; font-size: 40px; color:yellow;'></p>
+	<p id='aradhya' style='text-decoration: underline; font-size: 40px; color:yellow;'></p>
+	<p id='miraya' style='text-decoration: underline; font-size: 40px; color:yellow;'></p>
+	<p id='shailendra' style='text-decoration: underline; font-size: 40px; color:yellow;'></p>
+	<p id='sunita' style='text-decoration: underline; font-size: 40px; color:yellow;'></p>
+	<p id='aia' style='text-decoration: underline; font-size: 40px; color:yellow;'></p>
+	<p id='ksa' style='text-decoration: underline; font-size: 40px; color:yellow;'></p>
+	<p id='swati' style='text-decoration: underline; font-size: 40px; color:yellow;'></p>
+	<p id='aka' style='text-decoration: underline; font-size: 40px; color:yellow;'></p>
+	<p id='saa' style='text-decoration: underline; font-size: 40px; color:yellow;'></p>
 </div>
 <script>
 const currentDate=new Date();
 const currentMonth=currentDate.toLocaleString('default',{ month: 'long' });
 if(currentMonth==="December")
 {
+ document.getElementById('anju').innerText="Anju Birthday is on 11th December";
  document.getElementById('anurag').innerText="Anurag Birthday is on 18th December";
+ document.getElementById('kunal').innerText="Kunal Birthday is on 20th December";
  document.getElementById('ashish').innerText="Ashish Birthday is on 30th December";
 }
 else if (currentMonth==="July")
 {
 	document.getElementById('shashank').innerText="Shashank Birthday is on 13th July";
+	document.getElementById('indira').innerText="Indira Birthday is on 14th July";
+}
+else if (currentMonth==="June")
+{
+	document.getElementById('amrendra').innerText="Amrendra Birthday is on 6th June";
+	document.getElementById('rsa').innerText="Ravindra and Sunita Anniversary is on 7th June";
 }
 else if (currentMonth==="September")
 {
@@ -119,15 +127,34 @@ else if (currentMonth==="September")
 else if (currentMonth==="January")
 {
 	document.getElementById('khushi').innerText="Khushi Birthday is on 1st January";
+	document.getElementById('kamini').innerText="Kamini Birthday is on 1st January";
 	document.getElementById('kriti').innerText="Kriti Birthday is on 15th January";
+	document.getElementById('ravindra').innerText="Ravindra Birthday is on 18th January";
 }
 else if (currentMonth==="August")
 {
+	document.getElementById('arvind').innerText="Arvind Birthday is on 23rd August";
 	document.getElementById('aradhya').innerText="Aradhya Birthday is on 31st August";
 }
 else if (currentMonth==="April")
 {
 	document.getElementById('miraya').innerText="Miraya Birthday is on 23rd April";
+}
+else if (currentMonth==="February")
+{
+	document.getElementById('shailendra').innerText="Shailendra Birthday is on 10th February";
+}
+else if (currentMonth==="May")
+{
+	document.getElementById('sunita').innerText="Sunita Birthday is on 6th May";
+	document.getElementById('aia').innerText="Amrendra and Indira Anniversary is on 22nd May";
+	document.getElementById('ksa').innerText="Kunal and Swati Anniversary is on 25th May";
+	document.getElementById('swati').innerText="Swati Birthday is on 29th May";
+}
+else if (currentMonth==="March")
+{
+	document.getElementById('aka').innerText="Arvind and Kamini Anniversary is on 12th March";
+	document.getElementById('saa').innerText="Shailendra and Anju Anniversary is on 12th March";
 }
 else
 {
