@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dutta Family</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/*Now the CSS*/
+* {margin: 0; padding: 0;}
+
+.tree ul {
+	padding-top: 20px; position: relative;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+  font-weight: bold;
+  color: white;
+}
+
+.tree li {
+	float: left; text-align: center;
+	list-style-type: none;
+	position: relative;
+	padding: 20px 5px 0 5px;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+
+.tree li::before, .tree li::after{
+	content: '';
+	position: absolute; top: 0; right: 50%;
+	border-top: 3px solid #ccc;
+	width: 50%; height: 20px;
+}
+.tree li::after{
+	right: auto; left: 50%;
+	border-left: 3px solid #ccc;
+}
+
+/*We need to remove left-right connectors from elements without 
+any siblings*/
+.tree li:only-child::after, .tree li:only-child::before {
+	display: none;
+}
+
+/*Remove space from the top of single children*/
+.tree li:only-child{ padding-top: 0;}
+
+/*Remove left connector from first child and 
+right connector from last child*/
+.tree li:first-child::before, .tree li:last-child::after{
+	border: 0 none;
+}
+/*Adding back the vertical connector to the last nodes*/
+.tree li:last-child::before{
+	border-right: 3px solid #ccc;
+	border-radius: 0 5px 0 0;
+	-webkit-border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after{
+	border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
+}
+
+/*Time to add downward connectors from parents*/
+.tree ul ul::before{
+	content: '';
+	position: absolute; top: 0; left: 50%;
+	border-left: 3px solid #ccc;
+	width: 0; height: 20px;
+}
+
+.tree li a{
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: #666;
+	font-family: arial, verdana, tahoma;
+	font-size: 11px;
+	display: inline-block;
+	
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+/*Time for some hover effects*/
+/*We will apply the hover effect the the lineage of the element also*/
+.tree li a:hover, .tree li a:hover+ul li a {
+	background: #c8e4f8; color: #000; border: 1px solid #94a0b4;
+}
+/*Connector styles on hover*/
+.tree li a:hover+ul li::after, 
+.tree li a:hover+ul li::before, 
+.tree li a:hover+ul::before, 
+.tree li a:hover+ul ul::before{
+	border-color:  #94a0b4;
+}
+a {
+  color: white;
+}
+/*Thats all. I hope you enjoyed it.
+Thanks :)*/
+</style>
+</head>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="family.jpg" style="width:100%">
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="photos.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>PHOTOS</p>
+  </a>
+  <a href="parents.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-users w3-xxlarge"></i>
+    <p>PARENTS</p>
+  </a>
+  <a href="cousins.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>COUSINS</p>
+  </a>
+  <a href="events.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="bi bi-calendar-event"</i>
+    <p>EVENTS IN THIS MONTH</p>
+  </a>
+  <a href="tree.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="bi bi-calendar-event"</i>
+    <p>FAMILY TREE</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="index.html" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="photos.html" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+	<a href="parents.html" class="w3-bar-item w3-button" style="width:25% !important">PARENTS</a>
+	<a href="cousins.html" class="w3-bar-item w3-button" style="width:25% !important">COUSINS</a>
+	<a href="events.html" class="w3-bar-item w3-button" style="width:25% !important">EVENTS IN THIS MONTH</a>
+	<a href="tree.html" class="w3-bar-item w3-button" style="width:25% !important">FAMILY TREE</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo">Dutta Family</h1>
+	<h3> Family Tree </h3>
+	
+	<!--
+We will create a family tree using just CSS(3)
+The markup will be simple nested lists
+-->
+<div class="tree" style="width:1000px; margin:0 auto;">
+	<ul>
+		<li>
+			<a href="#"><b>Vednarayan Dutta</a>
+			<ul>
+				<li>
+					<a href="#">Indira Dutta</a>
+					<ul>
+						<li>
+							<a href="#">Ashish</a>
+						</li>
+            <li>
+							<a href="#">Anurag</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Ravindra Dutta</a>
+					<ul>
+						<li><a href="#">Shashank</a></li>
+						<li>
+							<a href="#">Mayank</a>
+				</li>
+			</ul>
+		</li>
+        <li>
+					<a href="#">Arvind Dutta</a>
+					<ul>
+						<li><a href="#">Khushi</a></li>
+			</ul>
+		</li>
+        <li>
+					<a href="#">Priya Dutta</a>
+		</li>
+        <li>
+					<a href="#">Anju Dutta</a>
+           <ul>
+						<li><a href="#">Kriti</a></li>
+						<li>
+							<a href="#">Aradhya</a>
+				</li>
+			</ul>
+		</li>
+        </li>
+        <li>
+					<a href="#">Rajeev Dutta</a>
+		</li>
+    <li>
+					<a href="#">Swati Dutta</a>
+      <ul>
+						<li><a href="#">Miraya</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+</div>
+</body>
+</html>
